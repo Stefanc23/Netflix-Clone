@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import axios from "./axios";
 import "./Row.css";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
-function Row({ title, fetchUrl, isLargeRow }) {
+function Row({title, fetchUrl, isLargeRow}) {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -16,16 +16,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
     fetchData();
   }, [fetchUrl]);
 
-  console.log(movies);
-
   return (
     <div className="row">
-      {/* title */}
       <h2>{title}</h2>
-
       <div className="row_posters">
-        {/* several row_poster(s) */}
-
         {movies.map(movie => {
           return (
             <img
@@ -39,8 +33,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
           );
         })}
       </div>
-
-      {/* container for posters */}
     </div>
   );
 }
