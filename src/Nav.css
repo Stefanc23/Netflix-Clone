@@ -21,8 +21,38 @@
   object-fit: contain;
 }
 
+.dropdown__control {
+  display: none;
+  font-size: 0.75rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.dropdown__menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: -350px;
+  left: 20px;
+  padding: 10px;
+  background-color: rgba(17, 17, 17, 0.5);
+  transition: all 0.75s;
+}
+
+.dropdown__link {
+  margin-right: 20px;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.dropped {
+  transform: translateY(420px);
+}
+
 .nav__menu {
   list-style-type: none;
+  transition: all 0.5s;
 }
 
 .nav__link {
@@ -37,4 +67,13 @@
   margin-right: 40px;
   width: 30px;
   object-fit: contain;
+}
+
+@media screen and (max-width: 720px) {
+  .dropdown__control {
+    display: block;
+  }
+  .nav__menu {
+    transform: translateX(-720px);
+  }
 }
