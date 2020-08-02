@@ -30,15 +30,12 @@ function Row({title, fetchUrl, isLargeRow}) {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
-      movieTrailer(
-        movie?.original_title || movie?.original_name || "",
-        (movie?.first_air_date || movie?.release_date)?.split("-")[0]
-      )
+      movieTrailer(movie?.title || movie?.name || "")
         .then(url => {
           const urlParams = new URLSearchParams(new URL(url).search);
           setTrailerUrl(urlParams.get("v"));
         })
-        .catch(error => console.log(error));
+        .catch(error => console.log(error, movie?.title || movie?.name || ""));
     }
   };
 

@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   z-index: 1;
+  text-shadow: 2px 2px #111;
 
   /* Animations */
   transition-timing-function: ease-in;
