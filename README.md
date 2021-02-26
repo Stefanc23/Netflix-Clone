@@ -1,4 +1,4 @@
-# COVID-19 Tracker
+# Netflix Frontend Clone
 
 DEMO: https://netflix-clone-f28cb.web.app/
 
